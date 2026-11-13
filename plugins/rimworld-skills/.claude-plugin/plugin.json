@@ -1,0 +1,11 @@
+{
+  "name": "rimworld-skills",
+  "displayName": "RimWorld Skills",
+  "version": "0.1.0",
+  "description": "Skills for RimWorld 1.7 (Waylith) mod development on Windows. rimworld-background-test runs a step script in a separate game instance with no visible window and no sound, then cleans up.",
+  "author": {
+    "name": "zzzz465"
+  },
+  "repository": "https://github.com/zzzz465/rimworld-skills",
+  "keywords": ["rimworld", "modding", "testing", "screenshots", "windows"]
+}

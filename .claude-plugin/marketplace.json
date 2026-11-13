@@ -1,0 +1,14 @@
+{
+  "name": "rimworld-skills",
+  "owner": {
+    "name": "zzzz465"
+  },
+  "description": "Claude Code skills for RimWorld 1.7 (Waylith) mod development on Windows.",
+  "plugins": [
+    {
+      "name": "rimworld-skills",
+      "source": "./plugins/rimworld-skills",
+      "description": "Test RimWorld 1.7 mods in a hidden, muted game instance driven by a step script: load a save, tick, open inspect tabs, change fields, measure frame time, take screenshots."
+    }
+  ]
+}

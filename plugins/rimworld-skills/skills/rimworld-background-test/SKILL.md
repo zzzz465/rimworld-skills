@@ -28,8 +28,11 @@ line and then quits the game.
 2. **Run it.** With the 226-mod setup, boot and save load take about a minute and a day of ticks (60,000)
    about another 40-60 seconds. Runs can exceed two minutes, so run in the background.
 
+   The runner is `scripts\run-test.ps1` in this skill's folder: the base directory shown when the skill
+   loads (inside the plugin cache when installed as a plugin). Use that absolute path:
+
    ```powershell
-   & "$env:USERPROFILE\.claude\skills\rimworld-background-test\scripts\run-test.ps1" -Script <script path> -Enable <packageId>
+   & "<skill base directory>\scripts\run-test.ps1" -Script <script path> -Enable <packageId>
    ```
 
    Options:
@@ -130,8 +133,10 @@ around x 0-790, y 0-840 of the capture contains the whole tab.
   copy and by the driver.
 - **Nothing is visible on screen:** a `-NoWindow` instance cannot be watched; judge it only by the logs
   and screenshots.
-- **Changing the driver:** rebuild with `dotnet build -c Release` in `driver/Source`. The output goes to
-  `driver/1.7/Assemblies`. Delete `obj` and `bin` afterwards.
+- **Changing the driver or the runner:** edit the clone of the `rimworld-skills` repository, not the
+  installed copy in the plugin cache, which is replaced on every plugin update. Rebuild the driver with
+  `dotnet build -c Release` in `driver/Source` (output: `driver/1.7/Assemblies`, delete `obj` and `bin`
+  afterwards), bump `version` in the plugin's `plugin.json`, commit, push, then update the plugin.
 - **Related notes:** the headless multi-instance proof of concept and its orchestrator
   (`source/rimworld-refs/tools/HeadlessOrchestrator`) are described in the memory note
   `rimworld-headless-multi-instance`. This skill packages only the single-instance, hidden-render,
