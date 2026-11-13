@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Background Test Driver (test only)</name>
+  <author>jungooji</author>
+  <packageId>jungooji.backgroundtestdriver</packageId>
+  <supportedVersions><li>1.7</li></supportedVersions>
+  <description>Runs a step script for automated tests. Acts only when launched with -tdscript=PATH and a -savedatafolder outside the default LocalLow folder.</description>
+</ModMetaData>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>BackgroundTestDriver</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <DebugType>none</DebugType>
+    <OutputPath>..\1.7\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <NoWarn>CA1416</NoWarn>
+    <RW>C:\Program Files (x86)\Steam\steamapps\common\RimWorld</RW>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp" HintPath="$(RW)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="UnityStubs" HintPath="$(RW)\UnityStubs.dll" Private="false" />
+    <Reference Include="Waylith" HintPath="$(RW)\Waylith.dll" Private="false" />
+  </ItemGroup>
+</Project>
